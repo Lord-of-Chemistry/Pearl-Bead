@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pearl & Bead | Handcrafted Bracelets</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFB6C1',
+                        secondary: '#FFD1DC',
+                        accent: '#FF69B4',
+                        dark: '#DB7093',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-pattern {
+            background-color: #FFD1DC;
+            background-image: url("http://static.photos/pink/1200x630/42");
+            background-blend-mode: overlay;
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .custom-shape-divider-bottom-1649084978 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+        .custom-shape-divider-bottom-1649084978 svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+        .custom-shape-divider-bottom-1649084978 .shape-fill {
+            fill: #FFFFFF;
+        }
+    </style>
+</head>
+<body class="bg-secondary">
+    <!-- Navigation -->
+    <nav class="bg-primary shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i data-feather="heart" class="text-white w-8 h-8 mr-2"></i>
+                    <span class="title-font text-white text-2xl font-bold">Pearl & Bead</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-white hover:text-accent font-medium">Home</a>
+                    <a href="#" class="text-white hover:text-accent font-medium">Shop</a>
+                    <a href="#" class="text-white hover:text-accent font-medium">Custom</a>
+                    <a href="#" class="text-white hover:text-accent font-medium">About</a>
+                    <a href="#" class="text-white hover:text-accent font-medium">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <i data-feather="shopping-bag" class="text-white w-6 h-6 cursor-pointer hover:text-accent"></i>
+                    <i data-feather="user" class="text-white w-6 h-6 cursor-pointer hover:text-accent"></i>
+                    <button class="md:hidden focus:outline-none">
+                        <i data-feather="menu" class="text-white w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern relative py-20 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                <h1 class="title-font text-4xl md:text-6xl font-bold text-white mb-6">Handcrafted Beaded Bracelets</h1>
+                <p class="text-white text-lg mb-8">Each piece is lovingly made with premium materials and your unique style in mind.</p>
+                <div class="flex space-x-4">
+                    <button class="bg-accent hover:bg-dark text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
+                        Shop Now
+                    </button>
+                    <button class="bg-white hover:bg-gray-100 text-accent font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
+                        Custom Order
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                <div class="relative">
+                    <img src="http://static.photos/pink/640x360/1" alt="Beaded Bracelet" class="rounded-lg shadow-xl w-full max-w-md border-8 border-white transform rotate-6">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-full shadow-lg">
+                        <i data-feather="star" class="text-accent w-8 h-8"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="custom-shape-divider-bottom-1649084978">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-dark mb-4">Our Signature Collection</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Product 1 -->
+                <div class="product-card bg-secondary rounded-lg overflow-hidden shadow-md transition duration-500 ease-in-out" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative">
+                        <img src="http://static.photos/pink/640x360/2" alt="Pearl Bracelet" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold">BESTSELLER</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="title-font text-xl font-bold text-dark mb-2">Pearl Elegance</h3>
+                        <p class="text-gray-600 mb-4">Luxurious freshwater pearls with gold accents</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-dark">$49.99</span>
+                            <button class="bg-primary hover:bg-accent text-white px-4 py-2 rounded-full text-sm transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-secondary rounded-lg overflow-hidden shadow-md transition duration-500 ease-in-out" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="http://static.photos/pink/640x360/3" alt="Gemstone Bracelet" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="title-font text-xl font-bold text-dark mb-2">Gemstone Harmony</h3>
+                        <p class="text-gray-600 mb-4">Natural gemstones with silver charms</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-dark">$39.99</span>
+                            <button class="bg-primary hover:bg-accent text-white px-4 py-2 rounded-full text-sm transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-secondary rounded-lg overflow-hidden shadow-md transition duration-500 ease-in-out" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative">
+                        <img src="http://static.photos/pink/640x360/4" alt="Birthstone Bracelet" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold">NEW</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="title-font text-xl font-bold text-dark mb-2">Birthstone Charm</h3>
+                        <p class="text-gray-600 mb-4">Personalized with your birthstone</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-dark">$59.99</span>
+                            <button class="bg-primary hover:bg-accent text-white px-4 py-2 rounded-full text-sm transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <button class="border-2 border-accent text-accent hover:bg-accent hover:text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    View All Collections
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Order Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-accent">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <img src="http://static.photos/pink/640x360/5" alt="Custom Bracelet" class="rounded-lg shadow-xl w-full max-w-md border-8 border-white transform -rotate-6">
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <h2 class="title-font text-3xl md:text-4xl font-bold text-white mb-6">Create Your Perfect Bracelet</h2>
+                    <p class="text-white mb-8">Our custom design service lets you create a one-of-a-kind piece that reflects your personal style. Choose from our selection of beads, charms, and materials to craft your perfect bracelet.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i data-feather="check-circle" class="text-white w-6 h-6 mr-3"></i>
+                            <span class="text-white">100+ bead options</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="check-circle" class="text-white w-6 h-6 mr-3"></i>
+                            <span class="text-white">Premium quality materials</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="check-circle" class="text-white w-6 h-6 mr-3"></i>
+                            <span class="text-white">Personalized sizing</span>
+                        </div>
+                    </div>
+                    <button class="mt-8 bg-white hover:bg-gray-100 text-accent font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                        Design Yours Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-dark mb-4">What Our Customers Say</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-secondary p-8 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img src="http://static.photos/people/200x200/1" alt="Sarah J." class="w-12 h-12 rounded-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-dark">Sarah J.</h4>
+                            <div class="flex">
+                                <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The Pearl Elegance bracelet is absolutely stunning! I've received so many compliments. The quality is exceptional and it arrived beautifully packaged."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-secondary p-8 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img src="http://static.photos/people/200x200/2" alt="Michael T." class="w-12 h-12 rounded-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-dark">Michael T.</h4>
+                            <div class="flex">
+                                <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"I ordered a custom bracelet for my wife's anniversary gift. The design process was easy and the final product exceeded all expectations. She loves it!"</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-secondary p-8 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img src="http://static.photos/people/200x200/3" alt="Emily R." class="w-12 h-12 rounded-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-dark">Emily R.</h4>
+                            <div class="flex">
+                                <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The craftsmanship is amazing! I've purchased several bracelets from Pearl & Bead and each one is perfect. Their customer service is outstanding too."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-primary">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-2xl mx-auto" data-aos="fade-up">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-white mb-4">Join Our Beading Community</h2>
+                <p class="text-white mb-8">Subscribe to receive exclusive offers, styling tips, and first access to new collections.</p>
+                <div class="flex flex-col sm:flex-row justify-center max-w-md mx-auto">
+                    <input type="email" placeholder="Your email address" class="px-4 py-3 rounded-full focus:outline-none mb-2 sm:mb-0 sm:mr-2 flex-grow">
+                    <button class="bg-accent hover:bg-dark text-white font-bold py-3 px-6 rounded-full transition duration-300">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i data-feather="heart" class="text-white w-8 h-8 mr-2"></i>
+                        <span class="title-font text-2xl font-bold">Pearl & Bead</span>
+                    </div>
+                    <p class="mb-4">Handcrafted beaded bracelets designed with love and attention to detail.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-accent"><i data-feather="instagram"></i></a>
+                        <a href="#" class="hover:text-accent"><i data-feather="facebook"></i></a>
+                        <a href="#" class="hover:text-accent"><i data-feather="twitter"></i></a>
+                        <a href="#" class="hover:text-accent"><i data-feather="pinterest"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="title-font text-lg font-bold mb-4">Shop</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent">All Bracelets</a></li>
+                        <li><a href="#" class="hover:text-accent">Pearl Collection</a></li>
+                        <li><a href="#" class="hover:text-accent">Gemstone Collection</a></li>
+                        <li><a href="#" class="hover:text-accent">Birthstone Collection</a></li>
+                        <li><a href="#" class="hover:text-accent">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="title-font text-lg font-bold mb-4">About</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent">Our Story</a></li>
+                        <li><a href="#" class="hover:text-accent">Materials</a></li>
+                        <li><a href="#" class="hover:text-accent">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-accent">Blog</a></li>
+                        <li><a href="#" class="hover:text-accent">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="title-font text-lg font-bold mb-4">Help</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-accent">FAQs</a></li>
+                        <li><a href="#" class="hover:text-accent">Shipping & Returns</a></li>
+                        <li><a href="#" class="hover:text-accent">Size Guide</a></li>
+                        <li><a href="#" class="hover:text-accent">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-sm">
+                <p>&copy; 2023 Pearl & Bead. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
