@@ -367,24 +367,63 @@
             easing: 'ease-in-out',
             once: true
         });
-    </script>
-    <script>
+        
         feather.replace();
-    </script>
-    <script>
-        let cart = [];
 
-  document.querySelectorAll(".product-card button").forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-      const product = btn.closest(".product-card");
-      const name = product.querySelector("h3").innerText;
-      const price = product.querySelector("span").innerText;
-
-      cart.push({ name, price });
-      alert(`${name} added to cart! 🛒`);
-      console.log(cart);
+        // Smooth scroll
+    document.querySelectorAll('.scroll-btn, .nav-link').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        document.getElementById(btn.dataset.target).scrollIntoView({ behavior: 'smooth' });
+      });
     });
-  });
+
+    // Mobile menu
+    document.getElementById('menu-btn').onclick = () => {
+      document.getElementById('menu').classList.toggle('hidden');
+    };
+
+    // Cart functionality
+    let cart = [];
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+      btn.onclick = () => {
+        const card = btn.closest('.product-card');
+        const name = card.dataset.product;
+        const price = card.dataset.price;
+        cart.push({ name, price });
+        updateCart();
+      };
+    });
+
+    function updateCart() {
+      const count = document.getElementById('cart-count');
+      count.textContent = cart.length;
+      count.classList.remove('hidden');
+    }
+
+    document.getElementById('cart-icon').onclick = () => {
+      const modal = document.getElementById('cart-modal');
+      const list = document.getElementById('cart-items');
+      list.innerHTML = cart.map(item => `<li>${item.name} - $${item.price}</li>`).join('');
+      modal.classList.remove('hidden');
+    };
+
+    document.getElementById('close-cart').onclick = () => {
+      document.getElementById('cart-modal').classList.add('hidden');
+    };
+
+    // Newsletter subscribe
+    document.getElementById('subscribe-btn').onclick = () => {
+      const email = document.getElementById('email-input').value;
+      const msg = document.getElementById('subscribe-msg');
+      if (email) {
+        msg.textContent = `Thanks for subscribing, ${email}! 🎉`;
+        msg.classList.remove('hidden');
+      } else {
+        msg.textContent = "Please enter a valid email.";
+        msg.classList.remove('hidden');
+      }
+    };
     </script>
 </body>
 </html>
