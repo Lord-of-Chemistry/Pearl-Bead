@@ -371,5 +371,20 @@
     <script>
         feather.replace();
     </script>
+    <script>
+        let cart = [];
+
+  document.querySelectorAll(".product-card button").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      const product = btn.closest(".product-card");
+      const name = product.querySelector("h3").innerText;
+      const price = product.querySelector("span").innerText;
+
+      cart.push({ name, price });
+      alert(`${name} added to cart! 🛒`);
+      console.log(cart);
+    });
+  });
+    </script>
 </body>
 </html>
